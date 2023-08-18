@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ASP.NETCoreMVCAPP.Models.Student>
+
+@{
+    ViewData["Title"] = $"Список студентов для группы {(Model.Count() > 0 ? Model.First().Group.Name : "")}";
+}
+
+@if (Model.Count() > 0)
+{
+    <h1>Список студентов для группы @Model.First().Group.Name</h1>
+}
+else
+{
+    <h1 style="color:orange">Отсутствуют студенты для данной группы</h1>
+}
+
+<p>
+    <a asp-action="Create">Добавить студента</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Group)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Group.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StudentId">Редактировать</a> |
+                <a asp-action="Details" asp-route-id="@item.StudentId">Детальнее</a> |
+                <a asp-action="Delete" asp-route-id="@item.StudentId">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

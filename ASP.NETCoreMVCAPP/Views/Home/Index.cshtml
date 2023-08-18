@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ASP.NETCoreMVCAPP.Models.Student>
+
+@{
+    ViewData["Title"] = "Список студентов";
+}
+
+<h1>Список студентов</h1>
+
+<p>
+    <a asp-controller="Students" asp-action="Create">Добавить студента</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Group)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Group.Course)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    <a asp-controller="Students" asp-action="ListStudentsForGroup" asp-route-id="@item.GroupId">@Html.DisplayFor(modelItem => item.Group.Name)</a>
+                </td>
+                <td>
+                    <a asp-controller="Groups" asp-action="ListGroupsForCourse" asp-route-id="@item.Group.Course.CourseId">@Html.DisplayFor(modelItem => item.Group.Course.Name)</a>
+                </td>
+                <td>
+                    <a asp-controller="Students" asp-action="Edit" asp-route-id="@item.StudentId">Редактировать</a> |
+                    <a asp-controller="Students" asp-action="Details" asp-route-id="@item.StudentId">Детальнее</a> |
+                    <a asp-controller="Students" asp-action="Delete" asp-route-id="@item.StudentId">Удалить</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

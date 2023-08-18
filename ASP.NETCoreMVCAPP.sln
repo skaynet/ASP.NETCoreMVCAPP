@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP.NETCoreMVCAPP", "ASP.NETCoreMVCAPP\ASP.NETCoreMVCAPP.csproj", "{AB9A39BD-460E-44E4-AC40-77BC5FC9A05F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NETCoreMVCAPPTests", "ASP.NETCoreMVCAPPTests\ASP.NETCoreMVCAPPTests.csproj", "{249BC94A-516C-4580-B09B-5F27F69F1C44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB9A39BD-460E-44E4-AC40-77BC5FC9A05F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9A39BD-460E-44E4-AC40-77BC5FC9A05F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9A39BD-460E-44E4-AC40-77BC5FC9A05F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9A39BD-460E-44E4-AC40-77BC5FC9A05F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249BC94A-516C-4580-B09B-5F27F69F1C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249BC94A-516C-4580-B09B-5F27F69F1C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249BC94A-516C-4580-B09B-5F27F69F1C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249BC94A-516C-4580-B09B-5F27F69F1C44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE8213C3-FD4E-4FE6-B506-3FC49F6531F5}
+	EndGlobalSection
+EndGlobal
